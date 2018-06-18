@@ -6,7 +6,7 @@ function throttle(fn, delay) {
     if(timer) {
       return
     }
-    var args = Array.prototype.slice(arguments)
+    var args = Array.prototype.slice.call(arguments)
     fn.apply(this, args)
     timer = setTimeout(function() {
       timer = null
